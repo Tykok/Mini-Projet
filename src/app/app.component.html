@@ -1,0 +1,18 @@
+<div>
+  <hot-table
+    class="hot"
+    [data]="dataset"
+    [colHeaders]="true"
+    [rowHeaders]="true"
+    [settings]="settings"
+    [licenseKey]="00000-00000-00000-00000-00000">
+    <hot-column data="id" [readOnly]="false" title="ID"></hot-column>
+    <hot-column data="description" title="Nom de l'option"></hot-column>
+    <hot-column data="prix" title="Prix"></hot-column>
+  </hot-table>
+</div>
+<button (click)="sendData()">Click</button>
+
+<div>
+  {{info()}}
+</div>
