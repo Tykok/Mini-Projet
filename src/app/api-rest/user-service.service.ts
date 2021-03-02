@@ -1,6 +1,6 @@
-import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { OptionVoiture } from '../option-voiture';
+import {Injectable} from '@angular/core';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
+import {OptionVoiture} from '../option-voiture';
 import {Observable} from 'rxjs';
 import {AppComponent} from '../app.component';
 
@@ -20,14 +20,12 @@ export class UserServiceService {
   }
 
   public saveData(option: OptionVoiture): void {
-    // console.log(option);
-     this.http.post<OptionVoiture>(this.optionURL, option).subscribe(
-       (response) => {
-         console.log('OK');
-       },
-       (error) => {
-         console.log('Erreur');
-         AppComponent.setEnregistrer(false);
-       });
+    this.http.post<OptionVoiture>(this.optionURL, option).subscribe(
+      (response) => {
+        console.log('OK');
+      },
+      (error) => {
+        console.log('Erreur');
+      });
   }
 }

@@ -1,18 +1,29 @@
-<div>
-  <hot-table
-    class="hot"
-    [data]="dataset"
-    [colHeaders]="true"
-    [rowHeaders]="true"
-    [settings]="settings"
-    [licenseKey]="00000-00000-00000-00000-00000">
-    <hot-column data="id" [readOnly]="false" title="ID"></hot-column>
-    <hot-column data="description" title="Nom de l'option"></hot-column>
-    <hot-column data="prix" title="Prix"></hot-column>
-  </hot-table>
-</div>
-<button (click)="sendData()">Click</button>
+<div class="col-12">
+  <div class="row justify-content-center">
+    <h1>Mini-projet Mecavin ! </h1>
+  </div>
 
-<div>
-  {{info()}}
+  <br/> <br/>
+  <div class="row justify-content-center">
+    <div>
+      <hot-table
+        class="hot"
+        [data]="dataset"
+        [colHeaders]="true"
+        [rowHeaders]="true"
+        [settings]="settings"
+        [licenseKey]="00000-00000-00000-00000-00000">
+        <hot-column data="id" [readOnly]="false" title="ID"></hot-column>
+        <hot-column data="description" title="Nom de l'option"></hot-column>
+        <hot-column data="prix" title="Prix"></hot-column>
+      </hot-table>
+    </div>
+  </div>
+
+  <br/><br/>
+  <div class="row justify-content-center">
+    <div class="col-2">
+      <button type="button" class="btn btn-success" (click)="sendData()">Enregistrer</button>
+    </div>
+  </div>
 </div>
